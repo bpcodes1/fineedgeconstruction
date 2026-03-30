@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-gold: #D99A45;
+  --color-black: #0C0C0C;
+  --color-cream: #FAF7F2;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-black font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .text-display {
+    @apply font-bold tracking-tighter leading-[0.9];
+  }
+  .clip-path-hero {
+    clip-path: polygon(0 15%, 70% 15%, 85% 0, 100% 15%, 100% 100%, 0 100%);
+  }
+  .clip-path-hero-mobile {
+    clip-path: polygon(0 5%, 60% 5%, 75% 0, 90% 5%, 100% 5%, 100% 100%, 0 100%);
+  }
+  .clip-path-parallelogram {
+    clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  }
+}
